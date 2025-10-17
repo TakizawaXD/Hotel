@@ -1,0 +1,18 @@
+# Python/Flask backend
+backend/.venv/
+backend/__pycache__/
+backend/instance/
+backend/.flaskenv
+
+# Frontend
+frontend/node_modules/
+frontend/dist/
+frontend/.env*
+
+# IDE / Editor specific
+.vscode/
+.idea/
+
+# OS specific
+.DS_Store
+thumbs.db

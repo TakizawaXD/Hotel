@@ -1,15 +1,11 @@
-import os
+# Este fichero es el punto de entrada para el servidor de desarrollo.
 
-from flask import Flask, send_file
+from roomwise.backend.app import create_app
 
-app = Flask(__name__)
-
-@app.route("/")
-def index():
-    return send_file('src/index.html')
-
-def main():
-    app.run(port=int(os.environ.get('PORT', 80)))
+# Crear la instancia de la aplicación Flask usando la factory
+app = create_app()
 
 if __name__ == "__main__":
-    main()
+    # Ejecutar la aplicación
+    # El puerto 5000 es el que espera el proxy de Vite
+    app.run(host='0.0.0.0', port=5000, debug=True)
